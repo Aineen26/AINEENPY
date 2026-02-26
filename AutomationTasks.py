@@ -6,7 +6,6 @@ import pandas as pd
 import os
 import glob
 
-
 def create_sample_files():
     if not os.path.exists('data_input'):
         os.makedirs('data_input')
@@ -17,7 +16,6 @@ def create_sample_files():
     pd.DataFrame(data1).to_csv('data_input/january_sales.csv', index=False)
     pd.DataFrame(data2).to_csv('data_input/february_sales.csv', index=False)
     print("Step 1: Sample CSV files created in '/data_input' folder.")
-
 
 
 def run_automation():
@@ -42,8 +40,6 @@ def run_automation():
         report.to_excel(writer, sheet_name='Summary', index=False)
 
     print(f"Step 2: Automation Complete! File saved as: {output_file}")
-
-
 
 if __name__ == "__main__":
     
