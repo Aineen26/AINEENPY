@@ -1,7 +1,4 @@
-"""PROGRAM OF Guessing Game (number guessing game)
-PROGRAM NAME: Guessing Game
-AUTHOR: AINEEN SAYYED
-DATE CREATED: 6/02/2026"""
+
 
 import random
 print("=="*25)
