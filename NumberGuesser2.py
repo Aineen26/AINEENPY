@@ -1,8 +1,4 @@
-"""PROGRAM FOR Guessing the correct Number
-PROGRAM NAME: NUMBER GUESSER
-AUTHOR: AINEEN SAYYED
-DATE CREATED: 31/01/2026"""
-# number of attempts = 3
+
 import random
 secret_number = random.randint(1,100)
 tries = 0
