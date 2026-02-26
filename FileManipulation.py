@@ -1,7 +1,4 @@
-"""PROGRAM FOR MANIPULATING FILES
-PROGRAM NAME: FILE MANIPULATION
-AUTHOR: AINEEN SAYYED
-DATE CREATED: 6/02/2026"""
+
 import  re
 from pathlib import Path
 from collections import Counter
