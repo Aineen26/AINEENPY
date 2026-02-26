@@ -1,7 +1,3 @@
-"""PROGRAM FOR having a fibonacci sequence
-PROGRAM NAME: FIBONACCI SEQUENCE
-AUTHOR: AINEEN SAYYED
-DATE CREATED: 31/01/2026"""
 
 from typing import List
 
