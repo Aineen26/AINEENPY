@@ -1,7 +1,4 @@
-"""PROGRAM OF Automation Tasks like Creating,inserting data in files automatically.
-PROGRAM NAME: Automation Tasks.
-AUTHOR: AINEEN SAYYED.
-DATE CREATED: 6/02/2026"""
+
 import pandas as pd
 import os
 import glob
