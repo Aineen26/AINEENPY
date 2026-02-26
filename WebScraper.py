@@ -1,7 +1,4 @@
-"""PROGRAM OF WEB SCRAPER WITH BeautifulSoup TO EXTRACT DATA(QUOTES) FROM DATASET
-PROGRAM NAME: WEB SCRAPER
-AUTHOR: AINEEN SAYYED
-DATE CREATED: 6/02/2026"""
+
 import time
 
 import requests
@@ -12,10 +9,8 @@ current_page = "/"
 
 while current_page:
     try:
-        # 1. Attempt the request with a timeout
         response = requests.get(base_url + current_page, timeout=10)
 
-        # 2. Check for HTTP errors (like 404 or 500)
         response.raise_for_status()
 
         soup = BeautifulSoup(response.text, 'html.parser')
@@ -26,19 +21,17 @@ while current_page:
 
         for q in quotes:
             try:
-                # 3. Handle missing elements (if a quote had no author, for example)
                 text = q.find('span', class_='text').text
                 author = q.find('small', class_='author').text
                 print(f"“{text}” — {author}")
             except AttributeError:
                 print("Skipping a quote due to missing data tags.")
 
-        # --- Pagination Logic ---
         next_button = soup.find('li', class_='next')
         if next_button:
             current_page = next_button.find('a')['href']
             print(f"\n--- Moving to: {current_page} ---\n")
-            time.sleep(1)  # Polite scraping: wait 1 second between pages
+            time.sleep(1)  
         else:
             current_page = None
 
